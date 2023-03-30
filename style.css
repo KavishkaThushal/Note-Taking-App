@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&family=Roboto:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto','sans-serif';
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('dp.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: blue;
+    height: 50px;
+    padding: 20px;
+    
+}
+ #logo h3{
+    font-family:'Alkatra';
+    font-size: 1.8rem;
+    color: white;
+}
+#logo span{
+    font-family: 'Lobster';
+    font-size: 2.5rem;
+    color: orangered;
+}
+
+.search input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    font-family: 'Alkatra';
+    padding: 10px;
+    border: none;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    border: 5px solid orangered;
+    
+    justify-content: flex-start;
+    margin-top: 20px;
+    
+}
+.container .o-frm{
+    
+    padding: 10px;
+    margin: 10px;
+    background-color:orangered;
+}
+.container .frm{
+    background-color: blue;
+    padding: 10px;
+}
+.container .frm .title{
+    text-align: center;
+    color: white;
+    letter-spacing: .2rem;
+    padding: 3px 10px;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.frm input{
+    padding: 10px;
+    margin: 5px auto;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Alkatra';
+    border: none;
+}
+.frm textarea{
+    padding: 7px 10px;
+    resize: none;
+    width: 100%;
+    margin: 5px auto;
+    font-family: 'Alkatra';
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+}
+#save{
+    width: 100%;
+    margin: 5px auto;
+    background-color: green;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s all ease-in-out;
+}
+#save:hover{
+    background-color: white;
+    color: green;
+}
+#reset{
+    width: 100%;
+    margin: 10px auto;
+    background-color: red;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s all ease-in-out;
+}
+#reset:hover{
+    background-color: white;
+    color: red;
+}
+#tbl{
+    width: 50%;
+    max-height: 300px;
+    margin: 10px ;
+    background-color: orangered;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#tbl table{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+#tbl table td{
+    border: 1px solid orangered;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Alkatra';
+}
+#tbl table th{
+    background-color: gainsboro;
+    padding: 5px 10px;
+    text-align: center;
+}
+ #tbl table td button{
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all ease-in-out;
+    
+ }
+ 
+.view{
+    background-color: green;
+    color: white;
+}
+.view:hover{
+    background-color: white;
+    color: green;
+}
+.del{
+    background-color: red;
+    color: white;
+}
+.del:hover{
+    background-color:white;
+    color: red;
+}
+
+@media(max-width:692px){
+    .container{
+       flex-direction: column;
+       align-items: center;
+
+    }
+    .o-frm{
+        width: 80%;
+        height: 300px;
+    }
+    .frm{
+        height: 280px;
+        box-sizing: border-box;
+    }
+    .frm input{
+        height: 25px;
+    }
+    .frm textarea{
+        height: 100px;
+    }
+    #save,#reset{
+        height: 30px;
+        padding: 5px;
+        margin: 3px auto;
+    }
+    #tbl{
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+@media(max-width:393px){
+   header{
+    width: 393px;
+   }
+    body{
+    height: 800px;
+    width: 393px;
+    overflow: hidden;
+   }
+   
+    .container{
+       flex-direction: column;
+       align-items: center;
+    }
+    .o-frm{
+        width: 80%;
+    }
+    .frm input{
+        height: 25px;
+    }
+    .frm textarea{
+        height: 100px;
+    }
+    #save,#reset{
+        height: 30px;
+        padding: 5px;
+        margin: 3px auto;
+    }
+    #tbl{
+        width: 80%;
+        margin: 10px auto;
+    }
+}
