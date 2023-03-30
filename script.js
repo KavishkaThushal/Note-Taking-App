@@ -4,15 +4,19 @@ var nbody=document.getElementById('n-body');
 var table=document.getElementById('n-tbl');
 var tableDiv=document.getElementById('tbl');
 var allDiv=document.getElementById('con');
+var search=document.getElementById('srch');
 
 window.onload=updateNote();
 
 form.addEventListener('submit',addEvent,false);
+
+search.addEventListener('keyup',searchNotes);
  var noteCount=0;
  var newNote='';
 function updateNote(){
         if(noteCount>0){
             tableDiv.style.display='';
+            table.appendChild(newNote);
             
         }else{
             tableDiv.style.display='none';
@@ -56,4 +60,20 @@ function addEvent(e){
         newNote=tr;
         updateNote();
     }
+}
+
+function searchNotes(e){
+    var text=e.target.value.toLowerCase();
+
+    var set=table.getElementsByClassName('items');
+
+    var list=Array.from(set);
+    list.forEach(function(i){
+         var searchTitle=i.firstChild.textContent;
+         if(searchTitle.toLocaleLowerCase().indexOf(text) !=-1){
+            i.style.display='';
+         }else{
+            i.style.display='none';
+         }
+    })
 }
