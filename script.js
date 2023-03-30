@@ -8,9 +8,11 @@ var search=document.getElementById('srch');
 
 window.onload=updateNote();
 
-form.addEventListener('submit',addEvent,false);
+form.addEventListener('submit',addEvent);
 
 search.addEventListener('keyup',searchNotes);
+
+table.addEventListener('click',dataDelete);
  var noteCount=0;
  var newNote='';
 function updateNote(){
@@ -27,7 +29,7 @@ function updateNote(){
 function addEvent(e){
     e.preventDefault();
     
-    if(ntitle.value=='' || nbody.value==''){
+    if(ntitle.value==='' || nbody.value===''){
         alert('Please fill the form!')
     }else{
         var tr=document.createElement('tr');
@@ -76,4 +78,17 @@ function searchNotes(e){
             i.style.display='none';
          }
     })
+}
+
+function dataDelete(e){
+    if(e.target.className==='del'){
+        if(confirm('Are you sure?')){
+            var title=e.target.parentElement.parentElement;
+            table.removeChild(title);
+            noteCount--;
+            updateNote();
+        }
+        
+
+    }
 }
