@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&family=Roboto:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&family=Roboto:wght@100&family=Russo+One&family=Source+Sans+Pro:wght@200&family=Tillana&display=swap');
 
 
 
@@ -21,14 +21,14 @@ body{
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: blue;
+    background-color:transparent;
     height: 50px;
     padding: 20px;
     
 }
  #logo h3{
     font-family:'Alkatra';
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: white;
 }
 #logo span{
@@ -57,14 +57,16 @@ body{
     
 }
 .container .o-frm{
-    
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
     background-color:orangered;
 }
 .container .frm{
-    background-color: blue;
+    border-radius: 5px;
+    background-color:#343434;
     padding: 10px;
+    position: relative;
 }
 .container .frm .title{
     text-align: center;
@@ -72,7 +74,8 @@ body{
     letter-spacing: .2rem;
     padding: 3px 10px;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: 'Russo One';
 
 }
 .frm input{
@@ -83,66 +86,90 @@ body{
     font-family: 'Alkatra';
     border: none;
 }
+.frm input:focus{
+    position:relative;
+    top:-5px
+}
 .frm textarea{
     padding: 7px 10px;
     resize: none;
     width: 100%;
-    margin: 5px auto;
+    margin: 10px auto;
     font-family: 'Alkatra';
     height: 150px;
     border: none;
     border-radius: 5px;
 }
+.frm textarea:focus{
+    position:relative;
+    top:-5px
+}
 #save{
-    width: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
     margin: 5px auto;
-    background-color: green;
-    padding: 10px;
+    background-color:#379237 ;
+    padding: 5px 10px;
     border: none;
     font-size: 1rem;
     border-radius: 5px;
     color: white;
     transition: 0.5s all ease-in-out;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Alkatra';
 }
 #save:hover{
-    background-color: white;
-    color: green;
+    background-color: #82CD47;
+    color: white;
 }
 #reset{
-    width: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
     margin: 10px auto;
-    background-color: red;
-    padding: 10px;
+    background-color:#850000 ;
+    padding:5px 10px;
     border: none;
     font-size: 1rem;
     border-radius: 5px;
     color: white;
     transition: 0.5s all ease-in-out;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Alkatra';
 }
 #reset:hover{
-    background-color: white;
-    color: red;
+    background-color:#DF2E38;
+    color:white;
 }
-#tbl{
+.container #tbl{
     width: 50%;
     max-height: 300px;
     margin: 10px ;
-    background-color:transparent;
+    background-color:orangered;
     padding: 10px;
-    box-sizing: border-box;
+    overflow: auto;
+    border-radius: 5px;
 }
-#tbl table{
+.container #tbl table{
     width: 100%;
-    background-color: blue;
+    background-color: #343434;
     border-collapse: collapse;
-    box-sizing: border-box;
+    border-radius: 5px;
+   
+
 }
 #tbl table td{
-    border: 3px solid orangered;
+    border:1px solid orangered;
     padding: 10px;
     text-align: center;
     color: white;
     font-family: 'Alkatra';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
 }
 .note-body{
     display: none;
@@ -151,95 +178,60 @@ body{
     background-color: gainsboro;
     padding: 5px 10px;
     text-align: center;
-    border: 3px solid orangered;
+    border: 1px solid orangered;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Alkatra';
 }
  #tbl table td button{
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding: 8px;
     border: none;
     border-radius: 5px;
     transition: 0.5s all ease-in-out;
+    text-align: center;
+    
     
  }
  
 .view{
-    background-color: green;
+    background-color: #379237;
     color: white;
+    font-weight:400;
+    font-size: 1rem;
+    font-family: 'Alkatra';
+    transition: 0.5s all ease-in-out;
 }
 .view:hover{
-    background-color: white;
-    color: green;
-}
-.del{
-    background-color: red;
+    background-color: #82CD47;
     color: white;
 }
+.del{
+    background-color: #850000;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Alkatra';
+    transition: 0.5s all ease-in-out;
+}
 .del:hover{
-    background-color:white;
-    color: red;
+    background-color:#DF2E38;
+    color: white;
 }
-
-@media(max-width:692px){
+@media(max-width:600px){
     .container{
-       flex-direction: column;
-       align-items: center;
-
-    }
-    .o-frm{
-        width: 80%;
-        height: 300px;
-    }
-    .frm{
-        height: 280px;
-        box-sizing: border-box;
-    }
-    .frm input{
-        height: 25px;
-    }
-    .frm textarea{
-        height: 100px;
-    }
-    #save,#reset{
-        height: 30px;
-        padding: 5px;
-        margin: 3px auto;
-    }
-    #tbl{
-        width: 80%;
-        margin: 10px auto;
-    }
-}
-@media(max-width:393px){
-   header{
-    width: 393px;
-   }
-    body{
-    height: 800px;
-    width: 393px;
-    overflow: hidden;
-   }
-   
-    .container{
-       flex-direction: column;
-       align-items: center;
-    }
-    .o-frm{
-        width: 80%;
-    }
-    .frm input{
-        height: 25px;
-    }
-    .frm textarea{
-        height: 100px;
-    }
-    #save,#reset{
-        height: 30px;
-        padding: 5px;
-        margin: 3px auto;
-    }
-    #tbl{
-        width: 80%;
-        margin: 10px auto;
-    }
+        flex-direction: column;
+        align-items: center;
+ 
+     }
+     .container .o-frm,.container #tbl{
+        margin-bottom: 10px;
+        min-width: 250px;
+        margin-left: 0;
+        margin-right: 0;
+     }
+     .container #tbl{
+        width: 100%;
+     }
 }
