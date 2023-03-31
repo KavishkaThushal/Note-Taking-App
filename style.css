@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&family=Roboto:wght@100&family=Russo+One&family=Source+Sans+Pro:wght@200&family=Tillana&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto','sans-serif';
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('dp.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color:transparent;
+    height: 50px;
+    padding: 20px;
+    
+}
+ #logo h3{
+    font-family:'Alkatra';
+    font-size: 2rem;
+    color: white;
+}
+#logo span{
+    font-family: 'Lobster';
+    font-size: 2.5rem;
+    color: orangered;
+}
+
+.search input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    font-family: 'Alkatra';
+    padding: 10px;
+    border: none;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    border: 5px solid orangered;
+    
+    justify-content: flex-start;
+    margin-top: 20px;
+    
+}
+.container .o-frm{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color:orangered;
+}
+.container .frm{
+    border-radius: 5px;
+    background-color:#343434;
+    padding: 10px;
+    position: relative;
+}
+.container .frm .title{
+    text-align: center;
+    color: white;
+    letter-spacing: .2rem;
+    padding: 3px 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Russo One';
+
+}
+.frm input{
+    padding: 10px;
+    margin: 5px auto;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Alkatra';
+    border: none;
+}
+.frm input:focus{
+    position:relative;
+    top:-5px
+}
+.frm textarea{
+    padding: 7px 10px;
+    resize: none;
+    width: 100%;
+    margin: 10px auto;
+    font-family: 'Alkatra';
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+}
+.frm textarea:focus{
+    position:relative;
+    top:-5px
+}
+#save{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+    background-color:#379237 ;
+    padding: 5px 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s all ease-in-out;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Alkatra';
+}
+#save:hover{
+    background-color: #82CD47;
+    color: white;
+}
+#reset{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    background-color:#850000 ;
+    padding:5px 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s all ease-in-out;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Alkatra';
+}
+#reset:hover{
+    background-color:#DF2E38;
+    color:white;
+}
+.container #tbl{
+    width: 50%;
+    max-height: 300px;
+    margin: 10px ;
+    background-color:orangered;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 5px;
+}
+.container #tbl table{
+    width: 100%;
+    background-color: #343434;
+    border-collapse: collapse;
+    border-radius: 5px;
+   
+
+}
+#tbl table td{
+    border:1px solid orangered;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Alkatra';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+.note-body{
+    display: none;
+}
+#tbl table th{
+    background-color: gainsboro;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid orangered;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Alkatra';
+}
+ #tbl table td button{
+    width: 80%;
+    margin: 0 auto;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all ease-in-out;
+    text-align: center;
+    
+    
+ }
+ 
+.view{
+    background-color: #379237;
+    color: white;
+    font-weight:400;
+    font-size: 1rem;
+    font-family: 'Alkatra';
+    transition: 0.5s all ease-in-out;
+}
+.view:hover{
+    background-color: #82CD47;
+    color: white;
+}
+.del{
+    background-color: #850000;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Alkatra';
+    transition: 0.5s all ease-in-out;
+}
+.del:hover{
+    background-color:#DF2E38;
+    color: white;
+}
+@media(max-width:600px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+ 
+     }
+     .container .o-frm,.container #tbl{
+        margin-bottom: 10px;
+        min-width: 250px;
+        margin-left: 0;
+        margin-right: 0;
+     }
+     .container #tbl{
+        width: 100%;
+     }
+}

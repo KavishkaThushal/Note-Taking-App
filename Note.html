@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteApp</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="icon.ico" >
+</head>
+<body>
+   
+      <header>
+          <div class="navbar">
+            <div id="logo">
+                <h3><span>N</span>otes<span>..<span></h3>
+            </div>
+            <div class="search">
+                <input type="text" id="srch" placeholder="Search a note..">
+            </div>
+          </div>
+      </header>
+
+      <div class="container" id="con">
+        <div class="o-frm">
+        <form action="" class="frm" id="frm">
+            
+            <h3 class="title">Add a note</h3>
+            <input type="text" id="title" placeholder="Title">
+            <textarea name="" id="n-body" cols="30" rows="10" placeholder="Note Body.."></textarea>
+            <button id="save" type="submit">save</button>
+            <button id="reset" type="submit">Reset</button>
+        </form>
+    </div>
+        <div id="tbl">
+        <table id="n-tbl">
+            <tr>
+                <th>Title</th>
+                <th>View</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+    </div>
+      </div>
+      <script src="./script.js"></script>
+</body>
+</html>
